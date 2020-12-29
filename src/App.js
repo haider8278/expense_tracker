@@ -1,6 +1,5 @@
 import React, {useEffect, useRef} from 'react';
 import {Grid} from '@material-ui/core';
-import Paper from '@material-ui/core/Paper'
 import {PushToTalkButton, PushToTalkButtonContainer, ErrorPanel} from '@speechly/react-ui';
 import {SpeechState, useSpeechContext } from '@speechly/react-client';
 import Main from "./components/Main/Main";
@@ -21,11 +20,11 @@ const App = () => {
         <>
         <div className={classes.root}>
             <Grid container spacing={2}>
-                <Grid item xs={4}>
+                <Grid item md={4} xs={12}>
                     <Details title="Income" amount="50" />
                     <Details title="Expense" amount="30" />
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item md={8} xs={12}>
                     <Main/>
                 </Grid>
             </Grid>
