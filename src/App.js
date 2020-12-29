@@ -10,10 +10,10 @@ const App = () => {
     const classes = useStyles();
     const {speechState} = useSpeechContext();
     const main = useRef(null);
-    const executeScroll = () => main.current.scrollIntoView();
+    //const executeScroll = () => main.current.scrollIntoView();
     useEffect(() =>{
         if(speechState === SpeechState.Recording){
-            executeScroll();
+            //executeScroll();
         }
     },[speechState])
     return (
