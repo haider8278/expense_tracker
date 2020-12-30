@@ -8,11 +8,12 @@ import InfoCard from '../InfoCard';
 const Main = () => {
     const classes = useStyles();
     const {balance} = useContext(ExpenseTrackerContext);
+    const {REACT_APP_CURRENCY} = process.env;
     return (
         <Card className={classes.root}>
             <CardHeader title="Expense Tracker" subheader="Powered by speechly"/>
             <CardContent>
-                <Typography align="center" variant="h5">Total Balance ${balance}</Typography>
+                <Typography align="center" variant="h5">Total Balance {REACT_APP_CURRENCY} {balance}</Typography>
                 <Typography variant="subtitle1" style={{lineHeight:`1.5em`, marginTop:20}}>
                     {/* Info card */}
                     <InfoCard />
